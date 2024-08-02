@@ -216,7 +216,7 @@ function SinglePage() {
             </button>
 
             
-            {!(post.userId === currentUser.id) && <button onClick={makePayment}
+            {currentUser && !(post.userId === currentUser.id) && <button onClick={makePayment}
             disabled={post.userId === currentUser.id || isBooked === 'own' || isBooked === 'other'}
 
             style={{ backgroundColor: buttonColor, color: 'black'}}
